@@ -1,0 +1,1 @@
+A Healthcare Management System (HMS) is software that automates and integrates healthcare facility operations, including patient registration, appointment scheduling, electronic medical records (EMR), billing, inventory, and staff management. It enhances efficiency, improves patient care, and supports compliance with regulations using AI, IoT, and secure data management.
