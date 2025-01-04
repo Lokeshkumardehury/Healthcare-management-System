@@ -1,0 +1,89 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static%}
+<br>
+<br>
+<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Thumbnail Gallery</h1>
+      
+        <hr class="mt-2 mb-5">
+      
+        <div class="row text-center text-lg-start">
+      
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/a.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/b.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/c.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/l.png'%}" alt="" height="100%" width="100%">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/e.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/f.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/h.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/j.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/k.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/l.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/a.png'%}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <img class="img-fluid img-thumbnail" src="{% static 'images/a.png'%}" alt="" height="100%" width="100%">
+            </a>
+          </div>
+        </div>
+      
+      </div>
+      +
+</body>
+</html>
+{% endblock %}

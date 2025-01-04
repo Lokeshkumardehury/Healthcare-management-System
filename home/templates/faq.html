@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+{% block content %}
+<br>
+<br><br>
+<br><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <input type="checkbox" id="question1" class="question">
+            <label for="question1" class="question-label">What is Lorem Ipsum?</label>
+            <div class="answer">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="question2" class="question">
+            <label for="question2" class="question-label">Why do we use it?</label>
+            <div class="answer">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+        </div>
+        <!-- Add more FAQ items as needed -->
+    </div>
+</body>
+</html>
+{% endblock %}

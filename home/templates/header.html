@@ -1,0 +1,42 @@
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/header.css'%}">
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Health Management System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <!-- {{request.path}} -->
+            <li class="{% if request.path == '/' %}active{% endif %}">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="{% if request.path == '/about/' %}active{% endif %}">
+              <a class="nav-link " href="/about">about</a>
+            </li>
+            <li class="{% if request.path == '/contact/' %}active{% endif %}">
+              <a class="nav-link" href="/contact">contact</a>
+            </li>
+            <li class="{% if request.path == '/register/' %}active{% endif %}">
+              <a class="nav-link" href="/register">register</a>
+            </li>
+            <li class="{% if request.path == '/gallery/' %}active{% endif %}">
+              <a class="nav-link" href="/gallery">gallery</a>
+            </li>
+            <li class="{% if request.path == '/login/' %}active{% endif %}">
+              <a class="nav-link" href="/login">login</a>
+            </li>
+            <li class="{% if request.path == '/faq/' %}active{% endif %}">
+              <a class="nav-link " href="/faq">faq</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-primary text-white p-3">
+        <div class="container">
+            <h1>Doctor Profile Page</h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a  class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dviewdata" class="nav-link" href="#">Data</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a href="{%url 'profile_page'%}" class="nav-link" href="#">UpdateProfile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{%url 'dviewprofile'%}" class="nav-link" href="#">ViewProfile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <h2>User Data Table</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Image</th>
+                    <th>Resume</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in data %}
+                <tr>
+                    <td>{{ user.fname }}</td>
+                    <td>{{ user.lname }}</td>
+                    <td><img src="{{ user.image.url }}" height="50" width="50" alt="User Image"></td>
+                    <td><a href="{{ user.document.url }}">Download</a></td>
+                    <td>{{ user.address }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer class="bg-dark text-white text-center p-3">
+        <div class="container">
+            <p>&copy; 2024 My Modern Web Page. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+table img {
+    display: block;
+    margin: auto;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+</style>

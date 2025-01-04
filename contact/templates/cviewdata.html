@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) {
+            background-color: #20B2AA;
+        }
+        input[type="submit"] {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Address</th>
+        <th>Action</th>
+        {% for user in data %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <tr>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.mobile}}</td>
+                <td>{{user.address}}</td>
+                <td>
+                    <input type="email" name="email" value="{{user.email}}" hidden>
+                    <input type="submit" value="edit" name="btn">
+                    <input type="submit" value="delete" name="btn">
+                </td>
+    
+            </tr>
+        </form>
+        {% endfor %}
+    
+    </table>
+</body>
+</html>

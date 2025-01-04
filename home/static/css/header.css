@@ -1,0 +1,33 @@
+.active a{
+    background-color:transparent;
+    background-size: 20px;
+    border: 1px solid rgb(226, 8, 226);
+    animation: mymove 5s infinite;
+    border-spacing: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    font-weight: bold;
+    box-shadow: 10px;
+    list-style-type: armenian;
+  }
+
+  a:hover{
+    background-color: cyan;
+    background-size: 20px;
+    border: 1px solid rgb(208, 6, 6);
+    animation: mymove 5s infinite;
+    border-spacing: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    font-weight: bold;
+    border-radius: 4px 15px; 
+  }

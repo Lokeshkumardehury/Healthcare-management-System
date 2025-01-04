@@ -1,0 +1,22 @@
+<table border="solid">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Role_name</th>
+    </tr>
+    <tr>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.mobile}}</td>
+        <td>{{user.role_name}}</td>
+    </tr>
+    {% for data in data1 %}
+    <tr bgcolor="#20B2AA">
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.mobile}}</td>
+        <td>{{data.role_name}}</td>
+    </tr>
+    {% endfor %}
+</table>
